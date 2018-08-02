@@ -9,7 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link href="{{url('css/app.css')}}" rel="stylesheet" type="text/css">
         <!-- Styles -->
         <style>
             html, body {
@@ -71,23 +71,25 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ url('barracas') }}">Barraca</a>
+                        <a href="#">Parque</a>
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Relatório Serviços Abadia
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="jumbotron">
+
+                    <p class="lead">Relatório barracas e brinquedos</p>
+                    <hr class="my-4">
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="{{url('barracas')}}" role="button">Barracas</a>
+                        <a class="btn btn-info btn-lg" href="#" role="button">Parque</a>
+                    </p>
                 </div>
             </div>
         </div>
